@@ -22,6 +22,25 @@ def calcular_factorial():
 
     print(f"El factorial de {n} es {factorial}")
 
+def imprimir_primos():
+    n = int(input("Ingrese cuántos números primos desea imprimir: "))
+    contador = 0
+    numero = 2  # empezamos a buscar primos desde 2
+
+    while contador < n:
+        es_primo = True
+        
+        for i in range(2, numero):
+            if numero % i == 0:
+                es_primo = False
+                break
+        
+        if es_primo:
+            print(numero)
+            contador += 1
+        
+        numero += 1    
+
 def rellenar_espacios(texto, tamanio):
     cantidad_espacios = tamanio - len(texto)
     return texto + ' ' * cantidad_espacios
@@ -51,6 +70,7 @@ while True:
        calcular_factorial()
        pass
     elif(opcion_seleccionada == '3'):
+       imprimir_primos()
        pass
     elif(opcion_seleccionada == '4'):
        pass
