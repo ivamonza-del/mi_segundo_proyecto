@@ -10,8 +10,18 @@ def fibonacci_serie():
     for i in range(n):
         print(a, end=" ")
         a, b = b, a + b
-print("/n")
-print("/n")
+
+
+
+def calcular_factorial():
+    n = int(input("Ingrese un número: "))
+    
+    factorial = 1
+    for i in range(1, n + 1):
+        factorial *= i
+
+    print(f"El factorial de {n} es {factorial}")
+
 def rellenar_espacios(texto, tamanio):
     cantidad_espacios = tamanio - len(texto)
     return texto + ' ' * cantidad_espacios
@@ -38,6 +48,7 @@ while True:
        fibonacci_serie()
        pass
     elif(opcion_seleccionada == '2'):
+       calcular_factorial()
        pass
     elif(opcion_seleccionada == '3'):
        pass
