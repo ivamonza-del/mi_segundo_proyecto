@@ -41,6 +41,24 @@ def imprimir_primos():
         
         numero += 1    
 
+def mostrar_perfectos():
+    n = int(input("¿Cuántos números perfectos deseas ver? "))
+    
+    encontrados = 0
+    num = 1
+
+    while encontrados < n:
+        suma = 0
+        for i in range(1, num):
+            if num % i == 0:
+                suma += i
+        
+        if suma == num:
+            print(num)
+            encontrados += 1
+
+        num += 1
+
 def rellenar_espacios(texto, tamanio):
     cantidad_espacios = tamanio - len(texto)
     return texto + ' ' * cantidad_espacios
@@ -73,6 +91,7 @@ while True:
        imprimir_primos()
        pass
     elif(opcion_seleccionada == '4'):
+       mostrar_perfectos()
        pass
     elif(opcion_seleccionada == '5'):
         break
