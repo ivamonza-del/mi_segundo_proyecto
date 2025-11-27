@@ -64,8 +64,9 @@ def rellenar_espacios(texto, tamanio):
     return texto + ' ' * cantidad_espacios
  
 print("╔" + "═" * 64 + "╗")
-print("║" + "Bienvenido al mundo de ...".center(64) + "║")
+print("║" + "Series matemáticas ...".center(64) + "║")
 print("╚" + "═" * 64 + "╝\n")
+input('Presione una tecla para continuar.')
  
 while True:
     print("╔" + "═" * 64 + "╗")
